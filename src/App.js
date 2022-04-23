@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import DragDropBoard from "./components/DragDropBoard";
+import "./App.css";
 
 function App() {
+  const list = [
+    { type: "todo", label: "grocery shopping" },
+    { type: "todo", label: "costco shopping" },
+    { type: "In Progress", label: "santa cruz drive" },
+    { type: "In Progress", label: "school project" },
+    { type: "Completed", label: "interview prep" },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DragDropBoard list={list} name={"Monthly Tasks list"} />
     </div>
   );
 }
